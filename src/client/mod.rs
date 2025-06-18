@@ -1,9 +1,9 @@
 pub mod cli;
 pub mod net;
 
+use crate::client::cli::Cli;
 use anyhow::Result;
 use clap::Parser;
-use crate::client::cli::Cli;
 
 pub async fn run() -> Result<()> {
     let args = Cli::parse();
